@@ -28,6 +28,24 @@ public class SinhVien {
     public String getMaSinhVien() {
         return maSinhVien;
     }
+
+    public String getHoTen() {
+        return hoTen;
+    }
+
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
+    public double getGpa() {
+        return gpa;
+    }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+    
+    
     
     public static void main(String[] args) {
         SinhVien x=new SinhVien("CNTT1","Nguyen Van Teo",3.2);
