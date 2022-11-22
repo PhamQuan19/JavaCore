@@ -1,6 +1,7 @@
 package sinhvien;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,9 +35,75 @@ public class StudentManager {
        studentList.add(student);
        studentDao.write(studentList); 
    }
+   
+   public void edit(int id) throws IOException{
+       boolean isExisted=false;
+       int size=studentList.size();
+       for(int i=0;i<size;i++){
+           if(studentList.get(i).getId()==id){
+               isExisted=true;
+               studentList.get(i).setName(inputName());
+               studentList.get(i).setAge(inputAge());
+               studentList.get(i).setAddress(inputAddress());
+               studentList.get(i).setGpa(inputGpa());
+               break;
+               
+           }
+       }
+       if(!isExisted){
+           System.out.printf("id = %d not existed.\n",id);
+       }else{
+           studentDao.write(studentList); 
+       }
+   }
+   
+   public void delete(int id) throws IOException{
+       Student student =null;
+       int size=studentList.size();
+       for(int i=0;i<size;i++){
+           if(studentList.get(i).getId()==id){
+               student=studentList.get(i);
+               break;
+           }
+       }
+       if(student !=null){
+           studentList.remove(student);
+           studentDao.write(studentList); 
+       }
+   }
 
+   public void sortStudentByName() {
+        Collections.sort(studentList, new SortStudentByName());
+    }
+ 
+   
+    public void sortStudentByGPA() {
+        Collections.sort(studentList, new SortStudentByGPA());
+    }  
+   public void show(){
+       for(Student o :studentList){
+           System.out.format("%5d | ",o.getId());
+           System.out.format("%20s | ",o.getName());
+           System.out.format("%5d | ",o.getAge());
+           System.out.format("%20s | ",o.getAddress());
+           System.out.format("%10.1f%n ",o.getGpa());
+       }
+   }
+   
+   public int inputId() {
+        System.out.print("Input student id: ");
+        while (true) {
+            try {
+                int id = Integer.parseInt((sc.nextLine()));
+                return id;
+            } catch (NumberFormatException ex) {
+                System.out.print("invalid! Input student id again: ");
+            }
+        }
+    }
+   
     private String inputName() {
-        System.out.println("Input student address");
+        System.out.println("Input student name");
         return sc.nextLine();
     }
 
