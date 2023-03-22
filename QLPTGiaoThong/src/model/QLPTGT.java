@@ -153,5 +153,5 @@ public class QLPTGT implements IChucNang{
     public void datNhatTheoMau() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+    //java 2PTIT
 }
