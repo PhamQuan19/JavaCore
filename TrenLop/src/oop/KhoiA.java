@@ -41,7 +41,7 @@ public class KhoiA extends ThiSinh{
     }
 
     
-    public KhoiA(float toan, float li, float hoa, int soBaoDanh, String hoTen,
+    public KhoiA(float toan, float li, float hoa, String soBaoDanh, String hoTen,
             String diaChi, float uuTien) {
         super(soBaoDanh, hoTen, diaChi, uuTien);
         this.toan = toan;
@@ -70,7 +70,7 @@ public class KhoiA extends ThiSinh{
         System.out.println("");
     }
 //    public static void main(String[] args) {
-//        KhoiA a=new KhoiA();
+//        KhoiA a=new KhoiA(6,3,6,11,"Quan","Ha Noi",3.3f);
 //        a.Input();
 //        a.Output();
 //    }

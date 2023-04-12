@@ -16,7 +16,7 @@ public class KhoiC extends ThiSinh{
     public KhoiC() {
     }
 
-    public KhoiC(float van, float su, float dia, int soBaoDanh, String hoTen, String diaChi, float uuTien) {
+    public KhoiC(float van, float su, float dia, String soBaoDanh, String hoTen, String diaChi, float uuTien) {
         super(soBaoDanh, hoTen, diaChi, uuTien);
         this.van = van;
         this.su = su;

@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author Admin
  */
 public class ThiSinh {
-    private int soBaoDanh;
+    private String soBaoDanh;
     private String hoTen;
     private String diaChi;
     private float uuTien;
@@ -19,18 +19,18 @@ public class ThiSinh {
     public ThiSinh() {
     }
 
-    public ThiSinh(int soBaoDanh, String hoTen, String diaChi, float uuTien) {
+    public ThiSinh(String soBaoDanh, String hoTen, String diaChi, float uuTien) {
         this.soBaoDanh = soBaoDanh;
         this.hoTen = hoTen;
         this.diaChi = diaChi;
         this.uuTien = uuTien;
     }
 
-    public int getSoBaoDanh() {
+    public String getSoBaoDanh() {
         return soBaoDanh;
     }
 
-    public void setSoBaoDanh(int soBaoDanh) {
+    public void setSoBaoDanh(String soBaoDanh) {
         this.soBaoDanh = soBaoDanh;
     }
 
@@ -60,8 +60,8 @@ public class ThiSinh {
     
     public void Input(){
         Scanner sc=new Scanner(System.in);
-        System.out.println("Nhap so bao danh: ");
-        soBaoDanh=sc.nextInt();sc.nextLine();
+//        System.out.println("Nhap so bao danh: ");
+//        soBaoDanh=sc.nextLine();
         System.out.println("Nhap ho ten: ");
         hoTen=sc.nextLine();
         System.out.println("Nhap dia chi: ");

@@ -14,36 +14,38 @@ import java.util.Scanner;
  */
 public class TuyenSinh {
      public static Scanner sc=new Scanner(System.in);
-     public static List<ThiSinh> listThiSinh;
+     public static List<ThiSinh> listThiSinh= new ArrayList<>();
      
      public static void input() {
         System.out.print("Nhap so thi sinh can them: ");
         int N=Integer.parseInt(sc.nextLine());
          for (int i = 0; i < N; i++) {
-             int choose;
+          //   int choose;
 
              // System.out.println("Nhap thong tin sinh vien thu "+(i+1));
-             do {
-
-                 System.out.println("1.Thi sinh khoi A");
-                 System.out.println("2.Thi sinh khoi B");
-                 System.out.println("3.Thi sinh khoi C");
-                 System.out.println("Moi chon chuong trinh");
-                 choose = sc.nextInt();
-                 if (choose < 1 || choose > 3) {
-                     System.out.println("Vui long nhap lai");
-                 }
-             } while (choose < 1 || choose > 3);
-             if(choose==1){
+//             do {
+// 
+//                 System.out.println("1.Thi sinh khoi A");
+//                 System.out.println("2.Thi sinh khoi B");
+//                 System.out.println("3.Thi sinh khoi C");
+//                 System.out.println("Moi chon chuong trinh");
+//                 choose = sc.nextInt();
+//                 if (choose < 1 || choose > 3) {
+//                     System.out.println("Vui long nhap lai");
+//                 }
+//             } while (choose < 1 || choose > 3);
+             System.out.println("Nhập số báo danh: ");
+             String sbd=sc.nextLine();
+             if(sbd.charAt(0)=='A'){
                  ThiSinh x=new KhoiA();
                  x.Input();
                  listThiSinh.add(x);
              }
-             else if(choose==2){
+             else if(sbd.charAt(0)=='B'){
                  ThiSinh x=new KhoiB();
                  x.Input();
                  listThiSinh.add(x);
-             }else if(choose==3){
+             }else if(sbd.charAt(0)=='C'){
                  ThiSinh x=new KhoiC();
                  x.Input();
                  listThiSinh.add(x);
@@ -61,10 +63,10 @@ public class TuyenSinh {
      
      public static void timKiem(){
          System.out.println("Nhap so bao danh can tim kiem");
-         int sbd=sc.nextInt();
+         String sbd=sc.nextLine();
          boolean check=false;
          for (ThiSinh o : listThiSinh) {
-             if(o.getSoBaoDanh()==sbd){
+             if(o.getSoBaoDanh().equals(sbd)){
                  o.Output();
                  check=true;
              }
@@ -74,7 +76,7 @@ public class TuyenSinh {
          }
      }
      public static void main(String[] args) {
-        listThiSinh= new ArrayList<>();
+//        listThiSinh= new ArrayList<>();
       //  ThiSinh a=new KhoiA();
 //        a.Input();
         input();

@@ -16,7 +16,7 @@ public class KhoiB extends ThiSinh{
     public KhoiB() {
     }
 
-    public KhoiB(float toan, float hoa, float sinh, int soBaoDanh, String hoTen, String diaChi, float uuTien) {
+    public KhoiB(float toan, float hoa, float sinh, String soBaoDanh, String hoTen, String diaChi, float uuTien) {
         super(soBaoDanh, hoTen, diaChi, uuTien);
         this.toan = toan;
         this.hoa = hoa;
