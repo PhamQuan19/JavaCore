@@ -17,7 +17,7 @@ public class TestConnection {
     public TestConnection() throws ClassNotFoundException,
             SQLException {
       //  Class.forName("com.mysql.cj.jdbc.Driver");//nap trinh dieu khien
-        this.con= DriverManager.getConnection("jdbc:mysql://localhost:3306/qlsanpham", "root", ""); //thuc hien ket noi
+        this.con= DriverManager.getConnection("jdbc:mysql://localhost:3307/qlsp", "root", ""); //thuc hien ket noi
     }
 
     public ResultSet GetData(String tbName) throws SQLException {
