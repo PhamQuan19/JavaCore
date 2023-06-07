@@ -4,7 +4,6 @@
  */
 package de10Form;
 
-import de5Form.DienThoai;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -192,8 +191,8 @@ public class FormSach extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(btnTK))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(172, 172, 172))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37))
         );
 
         pack();
